@@ -1,0 +1,214 @@
+/********************/
+/*****Générale******/
+/*******************/
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+a {
+    font-size: 1.5rem;
+}
+
+.header {
+    background-color: rgba(154, 243, 236, 0.726);
+    box-shadow: 3px 3px 6px black ;
+}
+
+h1, h2 {
+    text-align: center;
+}
+
+h1 {
+    padding: 1rem;
+}
+
+h2 {
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+.intro {
+    text-align: center;
+}
+/*** Générale : navigateur ***/
+
+.nav, .souscat {
+    list-style-type: none;
+    display: flex;
+}
+
+.souscat {
+    display: none;
+}
+
+.souscat a:active {
+    display: flex;
+    flex-direction: column;
+}
+
+.nav {
+    justify-content: flex-end;
+}
+
+.nav a {
+    font-size: 1rem;
+    color : black;
+    border: 2px solid black;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px black;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+    margin: 0.5rem;
+}
+
+.nav a:active {
+    box-shadow: 2px 2px 2px black inset;
+}
+
+/*** page accueil ***/
+
+.liste {
+    list-style-type: none;
+    text-align: center;
+    padding: 0;
+    margin: 0;
+}
+
+
+/*** sujets de veille ***/
+
+.presentationVeille {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.innovation {
+    background-image: url(innovationWebmini.jpg);
+    width: 300px;
+    height: 225px;
+}
+
+.emploi {
+    background-image: url(actuEmploimini.jpg);
+    width: 300px;
+    height: 225px;
+}
+
+.tech {
+    background-image: url(actuCodemini.jpg);
+    width: 300px;
+    height: 225px;
+}
+
+.digitalisationRH {
+    background-image: url(digitalisationRHmini.jpg);
+    width: 300px;
+    height: 225px;
+}
+
+.innovation, .emploi, .tech, .digitalisationRH {
+    box-shadow: 3px 3px 3px rgba(126, 125, 125, 0.767);
+}
+
+.innovation a, .emploi a, .tech a, .digitalisationRH a {
+    text-decoration: none;
+    display: block;
+    color: black;
+    font-size: 1.5rem;
+    font-weight: bolder;
+    text-align: center;
+    width: 300px;
+    height: 225px;
+}
+
+.innovation a:hover, .emploi a:hover, .tech a:hover, .digitalisationRH a:hover {
+    background-color: rgba(139, 136, 141, 0.623);
+    transition-duration: 2s;
+}
+
+/*** articles ***/
+
+.gras {
+    font-weight: bold;
+}
+
+.gris {
+    background-color: rgba(154, 243, 236, 0.726);
+    color:  rgb(3, 110, 101);
+}
+
+.rose {
+    background-color: rgb(121, 218, 209);
+    color:   rgb(3, 110, 101);
+}
+
+.article {
+    width: 50vw;
+    margin: auto;
+    padding: 1rem;
+}
+
+.article a {
+    display: block;
+    width: 50vw;
+    text-align: center;
+    margin: auto;
+    text-decoration: none;
+    color:  rgb(3, 110, 101);
+    font-weight: bolder;
+}
+
+.article a:hover {
+    color:   rgb(2, 184, 168);
+    transition-duration: 2s;
+}
+
+.toutpetit {
+    font-size: 0.7rem;
+}
+
+/*** ajout articles ***/
+
+.formulaire {
+    text-align: center;
+    font-weight: bold;
+
+
+}
+
+.formulaire input, .formulaire legend, .formulaire textarea{
+    margin-bottom: 1.5rem;
+    margin-top: 0.5rem;
+    text-align: center; 
+}
+
+.formulaire input, .formulaire textarea {
+    background-color: rgba(154, 243, 236, 0.459);
+    width: 50%;
+    /* box-sizing: border-box;  pourquoi il l'ajustement de toutes les zone input et textarea ne fonctionne pas? */
+}
+
+.formulaire input:hover, .formulaire textarea:hover {
+    background-color: rgba(109, 204, 196, 0.459);
+}
+
+.formulaire legend {
+    width: 30%;
+}
+
+.formulaire fieldset {
+    width: 80%;
+    margin: auto;
+    border: 3px inset gray;
+}
+
+#ajoutArt {
+    padding: 0.5rem;
+    border-radius: 8px;
+}
+

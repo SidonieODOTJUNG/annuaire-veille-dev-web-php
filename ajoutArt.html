@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Ajouter un article</title>
+</head>
+<body>
+    <header>
+        <div class="header">
+            <nav>
+                <ul class="nav">
+                    <li><a href="C:\wamp64\www\coursPHPanpep\TP\AccueilVeilletech.html">Accueil</a></li>
+                    <li><a href="C:\wamp64\www\coursPHPanpep\TP\pageVeille.html">Veille</a></li>
+                        <ul class="nav souscat">
+                            <li><a href="C:\wamp64\www\coursPHPanpep\TP\artInnov.html">Innovation</a></li>
+                            <li><a href="C:\wamp64\www\coursPHPanpep\TP\artEmploi.html">Marché de l'emploi</a></li>
+                            <li><a href="C:\wamp64\www\coursPHPanpep\TP\artTechDev.html">Tech dev web</a></li>
+                            <li><a href="C:\wamp64\www\coursPHPanpep\TP\artTechRH.html">Tech et RH</a></li>
+                        </ul>
+                    <li><a href="C:\wamp64\www\coursPHPanpep\TP\ajoutArt.html">Ajouter un article</a></li>
+                </ul>
+            </nav>
+    
+            <h1>La veille de Sido</h1>
+        </div>
+    </header>
+    <section>
+        <h1>Ajouter un article</h1>
+
+        <form action="index.php" method="POST" class="formulaire">
+            <fieldset>
+                <legend>Ajouter un livre</legend>
+                <label for="titre">Entrer le titre de l'article</label> <br>
+                <input type="text" name="titre" id="titre"> <br>
+                <label for="url">Entrer l'URL de l'article</label> <br>
+                <input type="url" name="url" id="url"> <br>
+                <label for="date">Entrer la date de l'article</label> <br>
+                <input type="date" name="date" id="date"> <br>
+                <label for="resume">Entrer un résumé</label> <br>
+                <textarea name="resume" id="resume" cols="30" rows="10"></textarea> <br>
+                <input type="submit" name="ajoutArt" id="ajoutArt" value="Ajouter l'article" >
+            </fieldset>
+            
+        </form>
+    </section>        
+</body>
+</html>
