@@ -4,6 +4,26 @@
 
 <?php
     include_once 'articles.php';
+
+// structure de routage
+if(isset($_GET["page"])) {
+    switch($_GET["page"]) {
+        case "AccueilVeilletech" : $pageAInclure = "AccueilVeilletech.php";
+        break;
+        case "pageVeille" : $pageAInclure = "pageVeille.php";
+        break;
+        case "artInnov" : $pageAInclure = "artInnov.php";
+        break;
+        case "artEmploi" : $pageAInclure = "artEmploi.php";
+        break;
+        case "artTechDev" : $pageAInclure = "artTechDev.php";
+        break;
+        case "artTechRH" : $pageAInclure = "artTechRH.php";
+        break;
+        case "ajoutArt" : $pageAInclure = "ajoutArt.php";
+        break;
+    }
+}
 ?>
 
 <!-- 2nd partie -->
@@ -13,7 +33,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="maquetteHTMLCSS/style.css">
     <title>TP Veille techno</title>
 </head>
 <body>
@@ -36,8 +56,6 @@
             <h1>La veille de Sido</h1>
         </div>
     </header>
-    <?php
-    include_once 'AccueilVeilleTech.php';
-    ?>
+    <?php require_once $pageAInclure ?>
 </body>
 </html>
