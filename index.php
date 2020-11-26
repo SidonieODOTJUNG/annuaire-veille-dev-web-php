@@ -41,7 +41,10 @@
         <div>
             <h2>Le marché de l'emploi pour les dev</h2>
             <ul class="liste">
-                <li><?= var_dump($listemploi) ?></li>
+                <li><?= var_dump($listemploi[0]) ?></li>
+                <li><?= var_dump($listemploi[1]) ?></li>
+                <li><?= var_dump($listemploi[2]) ?></li>
+               
 
             </ul>    
         </div>
