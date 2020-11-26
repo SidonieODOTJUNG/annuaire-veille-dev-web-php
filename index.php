@@ -41,43 +41,47 @@
         <div>
             <h2>Le marché de l'emploi pour les dev</h2>
             <ul class="liste">
-                <li><?= var_dump($listemploi[0]) ?></li>
-                <li><?= var_dump($listemploi[1]) ?></li>
-                <li><?= var_dump($listemploi[2]) ?></li>
-               
-
+                <?php
+                    foreach ($listemploi as $value) {
+                        echo "<li>".$value['titre']. "</li>";
+                    }
+                ?>
             </ul>    
         </div>
         
         <div>
             <h2>Les innovations et le développement web</h2>
             <ul class="liste">
-                <li>Les 8 innovations du Web qui ont changé la consommation</li>
-                <li>Nouvelle norme de l'innovation numérique : les développeurs en première ligne</li>
-                <li>Le filtre de confidentialité</li>
+                <?php
+                    foreach ($listinnov as $value) {
+                        echo "<li>".$value['titre']. "</li>";
+                    }    
+                ?>
             </ul>
         </div>
 
         <div>
             <h2>Les actus outils du développement web</h2>
             <ul class="liste">
-                <li>TypeScript 4.0</li>
-                <li>Méthode agile : attention à l'absence d'expression des besoins</li>
+                <?php
+                    foreach ($listTechDev as $value) {
+                        echo "<li>".$value['titre']. "</li>";
+                    }    
+                ?>
             </ul>
         </div>
 
         <div>
             <h2>Les actus de la digitalisation RH</h2>
             <ul class="liste">
-                <li>La gamification en entreprise</li>
-                <li>La digitalisation des RH</li>
+                <?php
+                    foreach ($listTechRH as $value) {
+                        echo "<li>".$value['titre']. "</li>";
+                    }    
+                ?>
             </ul> 
         </div>
 
     </section>
-
-
-
-
 </body>
 </html>
