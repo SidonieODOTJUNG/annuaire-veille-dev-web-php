@@ -21,67 +21,23 @@
         <div class="header">
             <nav>
                 <ul class="nav">
-                    <li><a href="C:\wamp64\www\coursPHPanpep\TP\AccueilVeilletech.html">Accueil</a></li>
-                    <li><a href="C:\wamp64\www\coursPHPanpep\TP\pageVeille.html">Veille</a></li>
+                    <li><a href="index.php?page=AccueilVeilletech">Accueil</a></li>
+                    <li><a href="index.php?page=pageVeille">Veille</a></li>
                         <ul class="nav souscat">
-                            <li><a href="C:\wamp64\www\coursPHPanpep\TP\artInnov.html">Innovation</a></li>
-                            <li><a href="C:\wamp64\www\coursPHPanpep\TP\artEmploi.html">Marché de l'emploi</a></li>
-                            <li><a href="C:\wamp64\www\coursPHPanpep\TP\artTechDev.html">Tech dev web</a></li>
-                            <li><a href="C:\wamp64\www\coursPHPanpep\TP\artTechRH.html">Tech et RH</a></li>
+                            <li><a href="index.php?page=artInnov">Innovation</a></li>
+                            <li><a href="index.php?page=artEmploi">Marché de l'emploi</a></li>
+                            <li><a href="index.php?page=artTechDev">Tech dev web</a></li>
+                            <li><a href="index.php?page=artTechRH">Tech et RH</a></li>
                         </ul>
-                    <li><a href="C:\wamp64\www\coursPHPanpep\TP\ajoutArt.html">Ajouter un article</a></li>
+                    <li><a href="index.php?page=ajoutArt">Ajouter un article</a></li>
                 </ul>
             </nav>
     
             <h1>La veille de Sido</h1>
         </div>
     </header>
-    <section>
-        <h1>Liste des articles</h1>
-        <div>
-            <h2>Le marché de l'emploi pour les dev</h2>
-            <ul class="liste">
-                <?php
-                    foreach ($listemploi as $value) {
-                        echo "<li>".$value['titre']. "</li>";
-                    }
-                ?>
-            </ul>    
-        </div>
-        
-        <div>
-            <h2>Les innovations et le développement web</h2>
-            <ul class="liste">
-                <?php
-                    foreach ($listinnov as $value) {
-                        echo "<li>".$value['titre']. "</li>";
-                    }    
-                ?>
-            </ul>
-        </div>
-
-        <div>
-            <h2>Les actus outils du développement web</h2>
-            <ul class="liste">
-                <?php
-                    foreach ($listTechDev as $value) {
-                        echo "<li>".$value['titre']. "</li>";
-                    }    
-                ?>
-            </ul>
-        </div>
-
-        <div>
-            <h2>Les actus de la digitalisation RH</h2>
-            <ul class="liste">
-                <?php
-                    foreach ($listTechRH as $value) {
-                        echo "<li>".$value['titre']. "</li>";
-                    }    
-                ?>
-            </ul> 
-        </div>
-
-    </section>
+    <?php
+    include_once 'AccueilVeilleTech.php';
+    ?>
 </body>
 </html>
