@@ -1,31 +1,5 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Veille innovations développement</title>
-</head>
-<body>
-    <header>
-        <div class="header">
-            <nav>
-                <ul class="nav">
-                    <li><a href="C:\wamp64\www\coursPHPanpep\TP\AccueilVeilletech.html">Accueil</a></li>
-                    <li><a href="C:\wamp64\www\coursPHPanpep\TP\pageVeille.html">Veille</a></li>
-                        <ul class="nav souscat">
-                            <li><a href="C:\wamp64\www\coursPHPanpep\TP\artInnov.html">Innovation</a></li>
-                            <li><a href="C:\wamp64\www\coursPHPanpep\TP\artEmploi.html">Marché de l'emploi</a></li>
-                            <li><a href="C:\wamp64\www\coursPHPanpep\TP\artTechDev.html">Tech dev web</a></li>
-                            <li><a href="C:\wamp64\www\coursPHPanpep\TP\artTechRH.html">Tech et RH</a></li>
-                        </ul>
-                    <li><a href="C:\wamp64\www\coursPHPanpep\TP\ajoutArt.html">Ajouter un article</a></li>
-                </ul>
-            </nav>
-    
-            <h1>La veille de Sido</h1>
-        </div>
-    </header>
+
+
     <section>
         <h1>Les innovations du web</h1>
         <h2>Les innovations qui changent le metier de développeur</h2>
@@ -33,7 +7,24 @@
             ouvrent de nouvelles spécialisations, impactent le quotidien du développeur.
         </p>
 
-        <article class="gris article">
+    <?php
+
+
+        echo "<article class=\"gris article\">";
+    ?>
+
+    <?php foreach($listemploi as $article) : ?>
+        <div class="buttom">  
+            <a href="<?= $article['lienart'] ?>"><?= $article['titre'] ?></a>
+            <p class="toutpetit"><span class="gras"><?= $article['date']?></span><?= $article['site']?></p>
+        </div>
+        <!-- pour en savoir plus... -->
+        <div>
+            <p> <span class="gras">Résumé : </span><?= substr($article['contenu'], 0, 50)?>...<a href="index.php?page=artTransiPro" class="suite">Lire la suite</a></p>
+        </div>
+    <?php endforeach ?>
+
+        <!-- <article class="gris article">
             <div class="buttom">
                 <a href="https://www.ecommercemag.fr/Thematique/data-room-1223/Diaporamas/les-innovations-web-qui-ont-change-consommation-244724/les-places-marche-ligne-244725.html">Les 8 innovations du Web qui ont changé la consommation</a>
                 <p class="toutpetit"><span class="gras">27/08/2014  </span>ECommerceMag.fr</p>
@@ -65,7 +56,7 @@
                     vous avez du mal à travailler avec l’esprit tranquille à l’extérieur. 
                     En effet, une simple exposition du portable dans un lieu public suffit aux espions de récolter 
                     toutes les informations nécessaires pour nuire à votre entreprise ou votre projet. 
-                    Heureusement, les filtres de confidentialité pour ordinateur ont mis fin à cela.
+                    Heureusement, les filtres de confidentialité pour ordinateur ont mis fin à cela. -->
                 </p>
             </div>  
         </article>

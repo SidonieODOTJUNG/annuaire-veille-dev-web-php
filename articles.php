@@ -2,6 +2,9 @@
 
 //remplace la base de donnée
 
+
+//changer les liens page individuelle
+
 $artEmp1 = [
     'titre'=> 'Développeur : le joker des professionnels en transition',
     'date'=> '18/11/2020',

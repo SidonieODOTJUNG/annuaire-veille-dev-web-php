@@ -7,28 +7,23 @@
             Faire le point sur les lubies, la mise en place de vraies pratiques 
             efficientes, le développement RH dans le contecte de la digitalisation...
         </p>
-        <article class="gris article">
-            <div class="buttom">
-                <a href="https://theconversation.com/la-gamification-en-entreprise-un-jeu-dangereux-150197?utm_medium=email&utm_campaign=La%20lettre%20de%20The%20Conversation%20France%20du%2022%20novembre%202020%20-%201791917393&utm_content=La%20lettre%20de%20The%20Conversation%20France%20du%2022%20novembre%202020%20-%201791917393+CID_b921ff4a7318077d5123a2f8efa2adb3&utm_source=campaign_monitor_fr&utm_term=gamification">La gamification en entreprise</a>
-                <p class="toutpetit"><span class="gras">22/11/2020  </span>The Conversation</p>
-            </div>
-            <div>
-                <p><span class="gras">Résumé : </span>Enquête sur l'usage de la gamification en entrerprise 
-                    et sur ses dérives. L'impact négatif et les solutions 
-                    pour éviter les dérives.
-                </p>
-            </div>  
-        </article>
-        <article class="rose article">
-            <div class="buttom">
-                <a href="https://culture-rh.com/digitalisation-rh-definition-enjeux-attentes-exemple/">La digitalisation des RH</a>
-                <p class="toutpetit"><span class="gras">01/03/2020  </span>Culture RH</p>
-            </div>
-            <div>
-                <p><span class="gras">Résumé : </span>Enquête sur l'usage de la gamification en entrerprise 
-                    et sur ses dérives. L'impact négatif et les solutions 
-                    pour éviter les dérives.
-                </p>
-            </div>  
-        </article>
+        <?php
+            //article individuel (penser à modif pour avoir article gris, article rose... intercalés en JS)
+            require_once 'articles.php';
+        ?>
+
+        <?php foreach($listTechRH as $article) : ?>
+            <article class="gris article">
+                <div class="buttom">  
+                    <a href="<?= $article['lienart'] ?>"><?= $article['titre'] ?></a>
+                    <p class="toutpetit"><span class="gras"><?= $article['date']?></span><?= $article['site']?></p>
+                </div>
+                <!-- pour en savoir plus... -->
+                <div>
+                    <!-- penser au href sur les articles soit page individuelle soit juste afficher le reste du contenu : le contnu du livre ne suffit pas car ce n'est pas une url 
+                voire avec js if clique sur lien prend la valeur "$article['contenu']-->
+                    <p> <span class="gras">Résumé : </span><?= substr($article['contenu'], 0, 50)?>...<a href="" class="suite">Lire la suite</a></p>
+                </div>
+            </article>
+        <?php endforeach ?>
     </section>
