@@ -19,6 +19,8 @@ if(isset($_GET["page"])) {
         break;
         case "ajoutArt" : $pageAInclure = "ajoutArt.php";
         break;
+        case "artTransiPro" : $pageAInclure = "artTransiPro.php";
+        break;
         default : $pageAInclure = "AccueilVeilleTech.php";
     }
 }else {

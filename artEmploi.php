@@ -1,22 +1,41 @@
 
-
+<?php
+    require_once 'articles.php';
+?>
 <section>
         <h1>Marché de l'emploi</h1>
         <h2>Toute l'actu emploi pour dev web </h2>
-        <p class="intro">Veille sur les tech recherchées, les financements de sociétés, les recrutements,...
-            
-        </p>
+        <p class="intro">Veille sur les tech recherchées, les financements de sociétés, les recrutements,...</p>
 
-        <article class="gris article">
-            <div class="buttom">
+        <?php
+            //article individuel (penser à modif pour avoir article gris, article rose... intercalés)
+
+            echo "<article class=\"gris article\">";
+        ?>
+
+        <?php foreach($listemploi as $article) : ?>
+            <div class="buttom">  
+                <a href="<?= $article['lienart'] ?>"><?= $article['titre'] ?></a>
+                <p class="toutpetit"><span class="gras"><?= $article['date']?></span><?= $article['site']?></p>
+            </div>
+            <!-- pour en savoir plus... -->
+            <div>
+                <p> <span class="gras">Résumé : </span><?= substr($article['contenu'], 0, 50)?>...<a href="index.php?page=artTransiPro" class="suite">Lire la suite</a></p>
+            </div>
+        <?php endforeach ?>
+
+        <!-- <article class="gris article"> -->
+            <!-- <div class="buttom">
                 <a href="https://www.silicon.fr/developpeur-joker-professionnels-reconversion-351686.html#">Développeur : le joker des professionnels en transition</a>
                 <p class="toutpetit"><span class="gras">18/11/2020  </span>Silicon.fr</p>
-            </div>
-            <div>
+            </div> -->
+            <!-- <div>
                 <p><span class="gras">Résumé : </span>Analyse des débouchés professionnels suite à une reconversion en dev web...
                 </p>
-            </div>  
-        </article>
+            </div>   -->
+
+
+        <!-- </article>
         <article class="rose article">
             <div class="buttom">
                 <a href="https://www.zdnet.fr/actualites/quelles-competences-javascript-sont-les-plus-recherchees-en-ce-moment-39896295.htm">Compétences JS les plus recherchées</a>
@@ -36,5 +55,5 @@
                 <p><span class="gras">Résumé : </span>Analyse des secteurs d'activité concernés par la reprise des investissements...
                 </p>
             </div>  
-        </article>
+        </article> -->
     </section>

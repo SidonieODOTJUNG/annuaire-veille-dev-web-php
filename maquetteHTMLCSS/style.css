@@ -1,6 +1,7 @@
 /********************/
 /*****Générale******/
 /*******************/
+
 body {
     margin: 0;
     padding: 0;
@@ -181,6 +182,32 @@ h2 {
 
 .toutpetit {
     font-size: 0.7rem;
+}
+
+.suite {
+    font-size: 1rem;
+}
+
+/*** articles individuels ***/
+.cliquer {
+    display: block;
+    background-color: rgb(121, 218, 209);
+    text-decoration: none;
+    font-weight: bolder;
+    font-size: 1rem;
+    color: rgb(3, 110, 101) ;
+    border-radius: 8px;
+    box-shadow:3px 3px 3px rgb(128, 128, 128);
+    margin: auto;
+    padding: 1rem 1.5rem 1rem 1.5rem;
+}
+
+.articleInd {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin: auto;
+    text-align: center;
 }
 
 /*** ajout articles ***/
