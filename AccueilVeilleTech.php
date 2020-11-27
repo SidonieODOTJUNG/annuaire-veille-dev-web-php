@@ -6,8 +6,8 @@
             <h2>Le marché de l'emploi pour les dev</h2>
             <ul class="liste">
                 <?php
-                    foreach ($listemploi as $value) {
-                        echo "<li>".$value['titre']. "</li>";
+                    foreach ($listemploi as $article) {
+                        echo "<li>"."<a href=".$article['lien'].">".$article['titre']."</a>"."</li>";
                     }
                 ?>
             </ul>    
@@ -17,8 +17,8 @@
             <h2>Les innovations et le développement web</h2>
             <ul class="liste">
                 <?php
-                    foreach ($listinnov as $value) {
-                        echo "<li>".$value['titre']. "</li>";
+                    foreach ($listinnov as $article) {
+                        echo "<li>"."<a href=".$article['lien'].">".$article['titre']."</a>"."</li>";
                     }    
                 ?>
             </ul>
@@ -28,8 +28,8 @@
             <h2>Les actus outils du développement web</h2>
             <ul class="liste">
                 <?php
-                    foreach ($listTechDev as $value) {
-                        echo "<li>".$value['titre']. "</li>";
+                    foreach ($listTechDev as $article) {
+                        echo "<li>"."<a href=".$article['lien'].">".$article['titre']."</a>"."</li>";
                     }    
                 ?>
             </ul>
@@ -39,8 +39,8 @@
             <h2>Les actus de la digitalisation RH</h2>
             <ul class="liste">
                 <?php
-                    foreach ($listTechRH as $value) {
-                        echo "<li>".$value['titre']. "</li>";
+                    foreach ($listTechRH as $article) {
+                        echo "<li>"."<a href=".$article['lien'].">".$article['titre']."</a>"."</li>";
                     }    
                 ?>
             </ul> 

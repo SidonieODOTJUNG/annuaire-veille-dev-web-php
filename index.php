@@ -3,12 +3,12 @@
 <!-- partie 1 -->
 
 <?php
-    include_once 'articles.php';
+    require_once 'articles.php';
 
 // structure de routage
 if(isset($_GET["page"])) {
     switch($_GET["page"]) {
-        case "AccueilVeilletech" : $pageAInclure = "AccueilVeilletech.php";
+        case "AccueilVeilleTech" : $pageAInclure = "AccueilVeilleTech.php";
         break;
         case "pageVeille" : $pageAInclure = "pageVeille.php";
         break;
@@ -22,6 +22,7 @@ if(isset($_GET["page"])) {
         break;
         case "ajoutArt" : $pageAInclure = "ajoutArt.php";
         break;
+        default : $pageAInclure = "AccueilVeilleTech.php";
     }
 }
 ?>
