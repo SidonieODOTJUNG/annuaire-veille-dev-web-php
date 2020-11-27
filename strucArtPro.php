@@ -1,6 +1,6 @@
 <?php
 require_once "articles.php";
-$listemploi = $listemploi[0]
+$listemploi = $listemploi[$_GET["art"]];
 ?>
 
 <p class="toutpetit"> <a href="index.php?page=pageVeille" class="toutpetit">Les thèmes</a>/<a href="index.php?page=artEmploi" class="toutpetit">Les articles</a>/ <?= $listemploi['titre'] ?></p>

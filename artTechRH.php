@@ -12,7 +12,7 @@
             require_once 'articles.php';
         ?>
 
-        <?php foreach($listTechRH as $article) : ?>
+        <?php foreach($listTechRH as $index => $article) : ?>
             <article class="gris article">
                 <div class="buttom">  
                     <a href="<?= $article['lienart'] ?>"><?= $article['titre'] ?></a>
@@ -20,9 +20,7 @@
                 </div>
                 <!-- pour en savoir plus... -->
                 <div>
-                    <!-- penser au href sur les articles soit page individuelle soit juste afficher le reste du contenu : le contnu du livre ne suffit pas car ce n'est pas une url 
-                voire avec js if clique sur lien prend la valeur "$article['contenu']-->
-                    <p> <span class="gras">Résumé : </span><?= substr($article['contenu'], 0, 50)?>...<a href="" class="suite">Lire la suite</a></p>
+                    <p> <span class="gras">Résumé : </span><?= substr($article['contenu'], 0, 50)?>...<a href="index.php?page=strucArtRH&art=<?= $index ?>" class="suite">Lire la suite</a></p>
                 </div>
             </article>
         <?php endforeach ?>
