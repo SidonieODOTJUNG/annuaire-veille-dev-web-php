@@ -10,7 +10,7 @@
             <ul class="liste">
                 <?php
                     foreach ($listemploi as $article) {
-                        echo "<li>"."<a href=".$article['lien'].">".$article['titre']."</a>"."</li>";
+                        echo "<li>"."<a href=".$article['lien']." class=\"lienArt\">".$article['titre']."</a>"."</li>";
                     }
                 ?>
             </ul>    
@@ -21,7 +21,7 @@
             <ul class="liste">
                 <?php
                     foreach ($listinnov as $article) {
-                        echo "<li>"."<a href=".$article['lien'].">".$article['titre']."</a>"."</li>";
+                        echo "<li>"."<a href=".$article['lien']." class=\"lienArt\">".$article['titre']."</a>"."</li>";
                     }    
                 ?>
             </ul>
@@ -32,7 +32,7 @@
             <ul class="liste">
                 <?php
                     foreach ($listTechDev as $article) {
-                        echo "<li>"."<a href=".$article['lien'].">".$article['titre']."</a>"."</li>";
+                        echo "<li>"."<a href=".$article['lien']." class=\"lienArt\">".$article['titre']."</a>"."</li>";
                     }    
                 ?>
             </ul>
@@ -43,7 +43,7 @@
             <ul class="liste">
                 <?php
                     foreach ($listTechRH as $article) {
-                        echo "<li>"."<a href=".$article['lien'].">".$article['titre']."</a>"."</li>";
+                        echo "<li>"."<a href=".$article['lien']." class=\"lienArt\">".$article['titre']."</a>"."</li>";
                     }    
                 ?>
             </ul> 
