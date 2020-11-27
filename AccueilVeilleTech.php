@@ -1,4 +1,7 @@
+<?php
+    require_once 'articles.php';
 
+?>
 
 <section>
         <h1>Liste des articles</h1>

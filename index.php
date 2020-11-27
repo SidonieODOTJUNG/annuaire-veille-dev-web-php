@@ -1,9 +1,6 @@
-<!-- tp veille techno -->
-
-<!-- partie 1 -->
+<!-- veille techno -->
 
 <?php
-    require_once 'articles.php';
 
 // structure de routage
 if(isset($_GET["page"])) {
@@ -24,6 +21,8 @@ if(isset($_GET["page"])) {
         break;
         default : $pageAInclure = "AccueilVeilleTech.php";
     }
+}else {
+    include("AccueilVeilleTech.php");
 }
 ?>
 
