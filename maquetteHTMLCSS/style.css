@@ -219,19 +219,19 @@ h2 {
 
 }
 
-.formulaire input, .formulaire legend, .formulaire textarea{
+.formulaire input, .formulaire legend, .formulaire textarea, .formulaire select {
     margin-bottom: 1.5rem;
     margin-top: 0.5rem;
     text-align: center; 
 }
 
-.formulaire input, .formulaire textarea {
+.formulaire input, .formulaire textarea, .formulaire select {
     background-color: rgba(154, 243, 236, 0.459);
     width: 50%;
     /* box-sizing: border-box;  pourquoi il l'ajustement de toutes les zone input et textarea ne fonctionne pas? */
 }
 
-.formulaire input:hover, .formulaire textarea:hover {
+.formulaire input:hover, .formulaire textarea:hover, .formulaire select:hover {
     background-color: rgba(109, 204, 196, 0.459);
 }
 
